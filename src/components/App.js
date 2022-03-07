@@ -14,6 +14,8 @@
 //   .catch(console.error);
 //
 
+/*import pokemon from './data/pokemon/pokemon.js';
+import webdev from './data/webdev/webdev.js';*/
 const App = () => {
   const el = document.createElement('div');
 
