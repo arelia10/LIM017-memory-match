@@ -1,5 +1,40 @@
-.imagePokemon{
-    background: coral;
-    width: 300px;
-    
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.a{
+  width: 100%;
+  display: flex;
+}
+
+h3 {
+  font-family: "Rowdies", cursive;
+  color: black;
+  font-size: 150%;
+}
+.b{
+  width: 100%;
+  display: flex;
+
+}
+.start{
+  position: absolute;
+  top: 50vh;
+  left: 46%;
+  background-color: white;
+  border-radius: 10px;
+  height: 3.5rem;
+  width: 10rem;
+}
+#go1{
+  left: 25%;
+}
+#go2{
+  left: 45%;
+}
+#go3{
+  left: 65%;
 }
