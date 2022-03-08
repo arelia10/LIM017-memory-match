@@ -4,9 +4,27 @@
     <meta charset="utf-8">
     <title>Memory Match</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@700&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <div id="image" class="imagePokemon"></div>
+<body>
+ 
+    <section class="windowinitial" id="initial" style="display: flex">
+      <img  class="a"src="imagenes/a.jpg" alt="">
+    <button class="start" id ="go"><h3>INICIAR</h3></button>
+    </section>
+    <section class="window" style="display:none">
+     <img  class="b" src="imagenes/b.jpg" alt="">
+     <button class="start" id ="go1"><h3>FACIL</h3></button>
+     <button class="start" id ="go2"><h3>MEDIA</h3></button>
+     <button class="start" id ="go3"><h3>DIFICIL</h3></button>
+</section>
+    
+     <!--<section class="window">
+      <img src="imagenes/b.jpg" alt="">
+     </section>-->
+
 
     <script src="main.js" type="module"></script>
   </body>
