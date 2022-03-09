@@ -14,6 +14,8 @@
 //   .catch(console.error);
 //
 
+/*import pokemon from "../data/pokemon/pokemon";*/
+
 /*import pokemon from './data/pokemon/pokemon.js';
 import webdev from './data/webdev/webdev.js';*/
 const App = () => {
@@ -24,5 +26,22 @@ const App = () => {
 
   return el;
 };
+
+export const cards=(pokemonArray)=>{
+//tomar data de card  y por cada data de arreglo generar un html de tarjeta combinarlo y devolverlo
+  const html = document.createElement('div');
+
+
+  for (let i = 0; i < pokemonArray.length; i++) {
+    const  pokemonElement = pokemonArray[i];
+    const  image =document.createElement('img');
+    image.src=pokemonElement.image;
+    html.appendChild(image);
+ image.style.id=pokemonElement.image;
+  
+}
+return html;
+
+}
 
 export default App;
