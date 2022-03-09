@@ -5,7 +5,7 @@
   font-family: sans-serif;
 }
 
-.a{
+.a {
   width: 100%;
   display: flex;
 }
@@ -15,12 +15,11 @@ h3 {
   color: black;
   font-size: 150%;
 }
-.b{
+.b {
   width: 100%;
   display: flex;
-
 }
-.start{
+.start {
   position: absolute;
   top: 50vh;
   left: 46%;
@@ -29,15 +28,12 @@ h3 {
   height: 3.5rem;
   width: 10rem;
 }
-#go1{
+#go1 {
   left: 25%;
 }
-#go2{
+#go2 {
   left: 45%;
 }
-#go3{
+#go3 {
   left: 65%;
-}
-element.style.bulbasaur{
-  left:50%px;
 }

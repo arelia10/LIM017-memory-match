@@ -29,16 +29,12 @@ const App = () => {
 
 export const cards=(pokemonArray)=>{
 //tomar data de card  y por cada data de arreglo generar un html de tarjeta combinarlo y devolverlo
-  const html = document.createElement('div');
+let html =" "
 
-
-  for (let i = 0; i < pokemonArray.length; i++) {
+for (let i = 0; i < pokemonArray.length; i++) {
     const  pokemonElement = pokemonArray[i];
-    const  image =document.createElement('img');
-    image.src=pokemonElement.image;
-    html.appendChild(image);
- image.style.id=pokemonElement.image;
-  
+    const   htmlDiv=`<div><img src="${pokemonElement.image}"></div>`;
+    html+=htmlDiv;
 }
 return html;
 

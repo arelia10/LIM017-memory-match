@@ -10,11 +10,23 @@ start.addEventListener("click", () => {
   windowinitial.style.display = "none";
   window.style.display = "block";
 });
+const easy = document.getElementById("go1"); 
+easy.addEventListener("click",()=>{
 
-document.getElementById('root').appendChild(App())
+const window= document.querySelector(".window");
+const  level= document.querySelector(".level");
+window.style.display="none";
+level.style.display="block";
+});
+
+
+document.querySelector(".sizecard").innerHTML=(cards(pokemon.items));
+
+
  
-const cardsHtml=cards(pokemon.items);
-document.getElementById('root').appendChild(cards(pokemon.items))
+/*const cardsHtml=cards(pokemon.items);
+document.getElementById("sizecard").appendChild(cards(pokemon.items))*/
+
 
 
 
