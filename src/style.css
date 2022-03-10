@@ -37,3 +37,27 @@ h3 {
 #go3 {
   left: 65%;
 }
+#level{
+  background-image:url("imagenes/b.jpg") ;
+}
+.sizecard{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-content: center;
+}
+.stylesizecard{
+  margin: 2% 30%;
+  padding: 30rem 0rem;
+  width: 40%;
+}
+/*.styleRoot2{
+  margin: 2% 10%;
+  padding:40rem 0rem;
+  width: 80%;
+}
+.styleRoot3{
+  margin: 2% 2%;
+  padding: 10rem 0;
+  width: 95%;
+}*/
