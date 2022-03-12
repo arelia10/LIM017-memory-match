@@ -14,7 +14,7 @@ const easy = document.getElementById("go1");
 easy.addEventListener("click",()=>{
 
 const window= document.querySelector(".window");
-const  level= document.querySelector(".level");
+const  level= document.querySelector("#level");
 window.style.display="none";
 level.style.display="block";
 });
