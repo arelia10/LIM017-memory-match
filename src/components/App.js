@@ -1,18 +1,3 @@
-//
-// Para incluir los diferentes sets de cartas podemos _importar_ el archivo
-// JavasSript que contenga el `export` correspondiente...
-//
-// import pokemon from '../data/pokemon/pokemon.js';
-// console.log(pokemon);
-//
-// O alternativamente podríamos cargar el JSON de forma asíncrona usando
-// `fetch` en el momento que consideremos necesario.
-//
-// fetch('./data/pokemon/pokemon.json')
-//   .then(resp => resp.json())
-//   .then(console.log)
-//   .catch(console.error);
-//
 
 import pokemon from '../data/pokemon/pokemon.js';
 
@@ -22,20 +7,37 @@ const App = () => {
   el.className = 'App';
   el.textContent = 'Hola mundo!';
 
+  const box = document.createElement('div');
+  box.className = 'Box';
+  el.appendChild(box);
+  //Contenedor de las cartas (también general)
+  const cardsBox = document.createElement('div');
+  cardsBox.className = 'cardsBox';
+  box.appendChild(cardsBox);
+  //const doubleArray= pokemon.items.concat(pokemon.items)
+  //const randomArray=randon(doubleArray)
+
+ 
+  
+  
   return el;
 };
+
 export const cards=(pokemonArray)=>{
   //tomar data de card  y por cada data de arreglo generar un html de tarjeta combinarlo y devolverlo
-  let html =" "
+    const html = document.createElement('div');
   
-  for (let i = 0; i < pokemonArray.length; i++) {
+  
+    for (let i = 0; i < pokemonArray.length; i++) {
       const  pokemonElement = pokemonArray[i];
-      const   htmlDiv=`<div><img src="${pokemonElement.image}"></div>`;
-      html+=htmlDiv;
+      const  image =document.createElement('img');
+      image.src=pokemonElement.image;
+      html.appendChild(image);
+   image.style.id=pokemonElement.image;
+  
   }
   return html;
   
   }
   
   export default App;
-  

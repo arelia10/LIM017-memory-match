@@ -16,6 +16,7 @@ h3 {
   font-size: 150%;
 }
 .b {
+  background-repeat: no-repeat;
   width: 100%;
   display: flex;
 }
@@ -37,27 +38,18 @@ h3 {
 #go3 {
   left: 65%;
 }
-#level{
+.level{
+ font-size:100px;
   background-image:url("imagenes/b.jpg") ;
+  
+    background-repeat: no-repeat;
+    display: flex;
+    position: relative;
 }
+
 .sizecard{
   display: flex;
     flex-wrap: wrap;
     justify-content:center;
     align-content: center;
 }
-.stylesizecard{
-  margin: 2% 30%;
-  padding: 30rem 0rem;
-  width: 40%;
-}
-/*.styleRoot2{
-  margin: 2% 10%;
-  padding:40rem 0rem;
-  width: 80%;
-}
-.styleRoot3{
-  margin: 2% 2%;
-  padding: 10rem 0;
-  width: 95%;
-}*/
