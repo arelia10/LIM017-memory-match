@@ -1,4 +1,4 @@
-const ramdon = function(pokeArray) {// Se le pasa el parámetro del conjunto de imágenes
+const random = function(pokeArray) {// Se le pasa el parámetro del conjunto de imágenes
     let shortArray = pokeArray.length - 1; //-1 para que no considere la posición 0
     let value = pokeArray.length; //
     while(shortArray > 0) { //Bucle que, antes de ejecutarse, evalúa como verdadera la condición shortArray > 0
@@ -14,4 +14,4 @@ const ramdon = function(pokeArray) {// Se le pasa el parámetro del conjunto de 
 
 }
   
-export default ramdon;
+export default random;

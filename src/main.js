@@ -1,27 +1,26 @@
 import App from './components/App.js';
-import {cards} from './components/App.js';
-import pokemon from './data/pokemon/pokemon.js';
+//import {cards} from './components/App.js';
+//import pokemon from './data/pokemon/pokemon.js';
 const start = document.getElementById("go"); 
 
 start.addEventListener("click", () => {
   
   const windowinitial = document.querySelector(".windowinitial");
- const window= document.querySelector(".window");
+ const level= document.querySelector(".level");
   windowinitial.style.display = "none";
-  window.style.display = "block";
+  level.style.display = "block";
 });
-const easy = document.getElementById("go1"); 
+/*const easy = document.getElementById("go1"); 
 easy.addEventListener("click",()=>{
 
 const window= document.querySelector(".window");
 const  level= document.querySelector(".level");
 window.style.display="none";
 level.style.display="block";
-});
+});*/
 
 
-//document.getElementById('root').appendChild(App())
+document.getElementById('root').appendChild(App())
 
 //const cardsHtml=cards(pokemon.items);
-document.getElementById('sizecard').appendChild(cards(pokemon.items))
-
+//document.getElementById('sizecard').appendChild(cards(pokemon.items))
