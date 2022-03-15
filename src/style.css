@@ -45,7 +45,7 @@ h3 {
  
   background-image:url("imagenes/b.jpg") ;
   position:absolute;
- display:  relative;
+ display:  flex;
   background-repeat: no-repeat;
   
   
