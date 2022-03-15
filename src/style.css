@@ -44,15 +44,15 @@ h3 {
 .level{
  
   background-image:url("imagenes/b.jpg") ;
-  background-repeat:no-repeat;
-  display: block;
-  width: 150%;
-  height:100%;
-  margin-top: 0rem;
-  margin-left: 0rem;
-  margin-right: 0rem;
+  position:absolute;
+ display:  relative;
+  background-repeat: no-repeat;
+  
   
 }
+  
+  
+
 .App{
   display:flex;
    flex-wrap: wrap;
