@@ -1,8 +1,6 @@
 
 import pokemon from '../data/pokemon/pokemon.js';
 import random from './random.js';
-
- // Importar función shuffle
 //import matchCards from './Match.js'; //Importar función match.
 
 const App = () => {
@@ -12,8 +10,17 @@ el.className = 'App';
   displayPokemon.className = 'pokemonkeBg';
   el.appendChild(displayPokemon);*/
 
- //Duplicar cada item de la data y randomizarlos (general, para ser usado por cada mazo)
- let doubleArray = pokemon.items.concat(pokemon.items); // Declara variable que dobla los items de Mononoke de Ghibli.js
+ 
+ 
+ return el;
+
+}
+
+const  pokemonfunction= () => {
+  const grid= document.createElement('div');
+  grid.className = "grid"
+//Duplicar cada item de la data y randomizarlos (general, para ser usado por cada mazo)
+let doubleArray = pokemon.items.concat(pokemon.items); // Declara variable que dobla los items de Mononoke de Ghibli.js
  const randomCards = random(doubleArray);
 
  //Recorro los elementos del array y los encierro en un div
@@ -24,14 +31,18 @@ el.className = 'App';
    const  image =document.createElement('img');
     image.src=randomCards[i].image;
     card.appendChild(image);
-   el.appendChild(card);
+   grid.appendChild(card);
 
+   /*let frontCard = document.createElement("img");
+   frontCard.src = randomCards[i].image;
+   frontCard.className = 'frontCard';
+   card.appendChild(frontCard);
 
-
-
-
+   let backCard = document.createElement("img");
+   backCard.src = '';
+   backCard.className = 'backCard';
+   card.appendChild(backCard);*/
  }
- return el;
-
-}
-  export default App;
+return grid;
+ }
+  export default pokemonfunction;

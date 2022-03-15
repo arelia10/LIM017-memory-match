@@ -1,5 +1,5 @@
-import App from './components/App.js';
-//import {cards} from './components/App.js';
+//import App from './components/App.js';
+import pokemonfunction from './components/App.js';
 //import pokemon from './data/pokemon/pokemon.js';
 const start = document.getElementById("go"); 
 
@@ -20,7 +20,7 @@ level.style.display="block";
 });*/
 
 
-document.getElementById('root').appendChild(App())
+document.getElementById('root').appendChild(pokemonfunction())
 
 //const cardsHtml=cards(pokemon.items);
 //document.getElementById('sizecard').appendChild(cards(pokemon.items))
