@@ -7,6 +7,14 @@ html{
   font-size:1px;
 }
 
+body{
+  background-image:url("imagenes/b.jpg") ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+background-attachment: fixed;
+
+}
 .a {
   display: block;
     width: 100%;
@@ -41,19 +49,7 @@ h3 {
 #go3 {
   left: 65%;
 }
-.level{
- 
-  background-image:url("imagenes/b.jpg") ;
-  position:absolute;
- display:  flex;
-  background-repeat: no-repeat;
-  
-  
-}
-  
-  
-
-.App{
+ .App{
   display:flex;
    flex-wrap: wrap;
   justify-content:center;
