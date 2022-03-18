@@ -33,7 +33,7 @@ let doubleArray = pokemon.items.concat(pokemon.items); // Declara variable que d
     card.appendChild(image);
    grid.appendChild(card);
 
-   /*let frontCard = document.createElement("img");
+   let frontCard = document.createElement("img");
    frontCard.src = randomCards[i].image;
    frontCard.className = 'frontCard';
    card.appendChild(frontCard);
