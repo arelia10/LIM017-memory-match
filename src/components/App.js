@@ -2,17 +2,17 @@
 import pokemon from '../data/pokemon/pokemon.js';
 import random from './random.js';
 //import matchCards from './Match.js'; //Importar función match.
-
 const App = () => {
-const el = document.createElement('div');
-el.className = 'App';
-/*const displayPokemon = document.createElement('div');
-  displayPokemon.className = 'pokemonkeBg';
-  el.appendChild(displayPokemon);*/
-
+  const App = (id,bgColor,image,flipBack) => {
+    const el = document.createElement('div');
+    el.className = 'Card';
+    el.id = id;
+    el.style.backgroundColor = bgColor;
+    el.style.backgroundImage = 'url("'+image+'")';
+    el.classList.add(flipBack);  
+  return el;
  
- 
- return el;
+  }
 
 }
 
@@ -25,21 +25,26 @@ let doubleArray = pokemon.items.concat(pokemon.items); // Declara variable que d
 
  //Recorro los elementos del array y los encierro en un div
  for (let i = 0; i < randomCards.length; i++) {
-   const card = document.createElement('div');
-   card.className = 'card';
-   card.id = randomCards[i].id;
+  // const card = document.createElement('div');
+   const cardsHtml=`<div class="card" id="${randomCards[i].id}">
+    <img src="${randomCards[i].image}"> 
+    <img class="flip-card-inner">
+    <img class="frontCard">
+    <img src="./imagenes/back.png" class="backCard">
+    </div>`
+   /*card.className = 'card';
+  card.id = randomCards[i].id;
    const  image =document.createElement('img');
     image.src=randomCards[i].image;
-    card.appendChild(image);
-   grid.appendChild(card);
+    image.style.background="color:white" ;
+    card.appendChild(image);*/
+   grid.innerHTML+=cardsHtml;
+    
 
-   /*let frontCard = document.createElement("img");
-   frontCard.src = randomCards[i].image;
-   frontCard.className = 'frontCard';
-   card.appendChild(frontCard);
+   
 
-   let backCard = document.createElement("img");
-   backCard.src = '';
+   /*let backCard = document.createElement("img");
+   backCard.src = './imagenes/back.png';
    backCard.className = 'backCard';
    card.appendChild(backCard);*/
  }
