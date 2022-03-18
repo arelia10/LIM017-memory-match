@@ -29,7 +29,7 @@ let doubleArray = pokemon.items.concat(pokemon.items); // Declara variable que d
    const cardsHtml=`<div class="card" id="${randomCards[i].id}">
     <img src="${randomCards[i].image}"> 
     <img class="flip-card-inner">
-    <img class="frontCard">
+    <img class="flip-card-front">
     <img src="./imagenes/back.png" class="backCard">
     </div>`
    /*card.className = 'card';
