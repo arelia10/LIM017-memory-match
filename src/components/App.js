@@ -8,12 +8,16 @@ const App = () => {
   let clickCard = [];
   let score = 0;
 
+  const box = document.createElement('div');
+  box.className = 'Box';
+  el.appendChild(box);
 
 
   //Cuadrícula para mostrar puntaje (general)
   const scoreBox = document.createElement('div');
   scoreBox.className = 'scoreBox';
- el.appendChild(scoreBox);
+ box.appendChild(scoreBox);
+ 
 
   //Mostrar el puntaje
   const theScore = document.createElement('p');
@@ -35,7 +39,7 @@ const App = () => {
   //Cuadrícula para distribuir las cartas 
   const grid = document.createElement('div');
   grid.className = 'grid';
-  el.appendChild(grid);
+box.appendChild(grid);
 
   //Se crea div con mensaje ganador.
   const winner = document.createElement('div');
@@ -53,7 +57,7 @@ const App = () => {
   winner.appendChild(winnerBox);
   winnerBox.appendChild(winnerText);
   winnerBox.appendChild(winBut);
-  el.appendChild(winner);
+  box.appendChild(winner);
 
 
 
