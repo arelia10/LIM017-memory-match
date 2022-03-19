@@ -170,16 +170,18 @@ h3 {
   justify-content: center;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+  align-content: center;
 }
 
 @media (min-width: 768px) {
   .backCard {
     height: 100%;
-    width: 100%;
+    width: 150%;
     position: absolute;
     justify-content: center;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+    align-content: center;
   }
 }
     .flipCard {
@@ -202,15 +204,4 @@ h3 {
         }
       }
 
-      .Box {
-        display: grid;
-      }
-      
-      @media (min-width: 768px) {
-        .Box {
-          display: grid;
-          grid-template-columns: 80% 20%;
-          column-gap: 20px;
-        }
-      }
-      
+     
