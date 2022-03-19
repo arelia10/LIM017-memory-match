@@ -96,7 +96,7 @@ h3 {
   display: flex;
   }
   .grid {
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
    
     grid-template-columns: auto auto auto auto auto auto;
@@ -119,8 +119,8 @@ h3 {
    }}
     /* estilo y funcionalidad de flip a la carta*/
     .card {
-    width: 65px;
-    height: 80px;
+      width: 120px;
+      height: 140px;
 
     border-radius: 20px;
     margin: 50px;
@@ -129,6 +129,7 @@ h3 {
     transition: transform 0.6s;
     transform-style: preserve-3d;
     animation: gameStart 3s;
+    cursor:pointer;
     }
     @media (min-width: 768px) {
     .card {
@@ -149,8 +150,6 @@ h3 {
     
 
     .frontCard {
-      height: 170%;
-      width: 350%;
     position: absolute;
     justify-content: center;
     backface-visibility: hidden;
@@ -158,8 +157,7 @@ h3 {
     transform: rotateY(180deg);
     background-color: hsl(0, 0%, 100%);
     border-radius: 10px;
-     margin-left:-128%;
-    margin-top: 0%;
+    
     
 }
     .backCard {
@@ -184,4 +182,22 @@ h3 {
     margin-top: 0%;
     }
     }
+    .flipCard {
+      transform: rotateY(180deg);
+    }
+    
+    .matchCards {
+      pointer-events: none;
+      transform: rotateY(180deg);}
+      @keyframes gameStart {
 
+        60%,
+        90% {
+          transform: rotateY(180deg);
+        }
+      
+        30%,
+        100% {
+          transform: rotateY(0deg);
+        }
+      }

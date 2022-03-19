@@ -63,3 +63,4 @@ function timeStar(total2){total=total2;
 
           
   },1000);}
+  
