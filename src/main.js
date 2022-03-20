@@ -60,6 +60,9 @@ function timeStar(total2){total=total2;
           if(total===0){clearInterval(cont)
             alert("tu tiempo termino")
           }
-
-          
   },1000);}
+
+  const flipcards= document.querySelector('.flip-card-inner');
+  flipcards.addEventListener('click', functionFlip () = {
+
+  });

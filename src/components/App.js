@@ -25,9 +25,19 @@ let doubleArray = pokemon.items.concat(pokemon.items); // Declara variable que d
 
  //Recorro los elementos del array y los encierro en un div
  for (let i = 0; i < randomCards.length; i++) {
-   const card = document.createElement('div');
-   card.className = 'card';
-   card.id = randomCards[i].id;
+
+  // const card = document.createElement('div');
+   const cardsHtml=`<div class="card" id="${randomCards[i].id}">
+    <img src="${randomCards[i].image}"> 
+    <img class="flip-card-inner">
+    <img class="flip-card-front">
+    <img src="./imagenes/back.png" class="backCard">
+    </div>`    
+      
+
+   /*card.className = 'card';
+  card.id = randomCards[i].id;
+
    const  image =document.createElement('img');
     image.src=randomCards[i].image;
     card.appendChild(image);
@@ -37,6 +47,7 @@ let doubleArray = pokemon.items.concat(pokemon.items); // Declara variable que d
    frontCard.src = randomCards[i].image;
    frontCard.className = 'frontCard';
    card.appendChild(frontCard);*/
+
    let backCard = document.createElement("img");
    backCard.src = '';
    backCard.className = 'backCard';
