@@ -1,5 +1,5 @@
-//import App from './components/App.js';
-import pokemonfunction from './components/App.js';
+import App from './components/App.js';
+//import pokemonfunction from './components/App.js';
 //import pokemon from './data/pokemon/pokemon.js';
 let total= 120;
 let min=0;
@@ -41,7 +41,7 @@ hard.addEventListener("click",()=>{
   window.style.display="none";
   level.style.display="block";
   timeStar(30)});
-document.getElementById(('root')).appendChild(pokemonfunction())
+document.getElementById(('root')).appendChild(App())
 
 //const cardsHtml=cards(pokemon.items);
 //document.getElementById('sizecard').appendChild(cards(pokemon.items))
@@ -62,7 +62,5 @@ function timeStar(total2){total=total2;
           }
   },1000);}
 
-  const flipcards= document.querySelector('.flip-card-inner');
-  flipcards.addEventListener('click', functionFlip () = {
+  
 
-  });
