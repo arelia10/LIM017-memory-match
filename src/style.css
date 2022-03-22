@@ -187,7 +187,7 @@ h3 {
       transform: rotateY(180deg);
     }
     
-    /*.matchCards {
+    .matchCards {
       pointer-events: none;
       transform: rotateY(180deg);}
       @keyframes gameStart {
@@ -202,4 +202,4 @@ h3 {
           transform: rotateY(0deg);
         }
       }
-      */
+      
