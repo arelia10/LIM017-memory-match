@@ -48,10 +48,10 @@ const App = () => {
   scoreNum.className = "scoreNum";
   theScore.appendChild(scoreNum);
   scoreBox.appendChild(theScore);
-  const monoGif = document.createElement("img");
-  monoGif.className = "monoGif";
-  //monoGif.src = './img/gifMono.gif';
-  scoreBox.appendChild(monoGif);
+  const pokeGif= document.createElement("img");
+  //pokemon.className = "pokeGif";
+  //poke.src = './img/poke.gif';
+  scoreBox.appendChild(pokeGif);
   const replayBut = document.createElement("img");
   replayBut.className = "replayBut";
   //replayBut.src = './img/returnImg.png';
