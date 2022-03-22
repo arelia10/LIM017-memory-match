@@ -8,7 +8,6 @@ html {
 }
 
 
-
 .b {
   /* Set rules to fill background */
   min-height: 100%;
@@ -193,7 +192,7 @@ h3 {
       transform: rotateY(180deg);}
       @keyframes gameStart {
 
-        60%,
+        70%,
         90% {
           transform: rotateY(180deg);
         }

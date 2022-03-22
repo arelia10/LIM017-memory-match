@@ -2,6 +2,7 @@
 import pokemon from '../data/pokemon/pokemon.js';
 import random from './random.js';
 //import matchCards from './Match.js'; //Importar función match.
+
 const App = () => {
   const el = document.createElement('div');
   el.className = 'App';
@@ -81,9 +82,9 @@ box.appendChild(grid);
     backCard.className = 'backCard';
     card.appendChild(backCard);
 
-
 }
   return el;
   }
 ;
 export default App ;
+ 
