@@ -191,7 +191,7 @@ h3 {
     .matchCards {
       pointer-events: none;
       transform: rotateY(180deg);}
-      /*@keyframes gameStart {
+      @keyframes gameStart {
 
         60%,
         90% {
