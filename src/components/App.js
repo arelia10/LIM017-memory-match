@@ -43,15 +43,11 @@ const App = () => {
   //Mostrar el puntaje
   const theScore = document.createElement("p");
   theScore.className = "theScore";
-  theScore.innerHTML = "Tu puntaje es: ";
+  theScore.innerHTML = "SCORE ";
   const scoreNum = document.createElement("span");
   scoreNum.className = "scoreNum";
   theScore.appendChild(scoreNum);
   scoreBox.appendChild(theScore);
-  const pokeGif= document.createElement("img");
-  //pokemon.className = "pokeGif";
-  //poke.src = './img/poke.gif';
-  scoreBox.appendChild(pokeGif);
   const replayBut = document.createElement("img");
   replayBut.className = "replayBut";
   //replayBut.src = './img/returnImg.png';
@@ -88,7 +84,7 @@ const App = () => {
 
       setTimeout(() => {
         matchCards(clickCard);
-      }, 1200);
+      },2500);
 
     }
   }
@@ -104,7 +100,7 @@ const App = () => {
       })}
       score += 100;
       scoreNum.innerHTML = score;
-      if (score == 600) {
+      if (score == 900) {
         winner.classList.add('active');
       }
       array.length = 0; //Si hacen match se vacía el array (parámetro).
