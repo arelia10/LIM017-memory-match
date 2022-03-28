@@ -2,30 +2,28 @@
   box-sizing: 0;
   padding: 0;
   margin: 0;
- 
 }
 html {
   font-size: 1px;
 }
-
+@font-face {
+  font-family: gamefont;
+  src: url(Nintendo-DS-BIOS.ttf);
+}
 
 body {
   background-image: url(imagenes/b.jpg);
-   background-repeat: no-repeat;
-   background-position:center ;
-    background-attachment: fixed;
-    background-size: cover;
-    
-
-    height: 100vh;
-  }
-   
-
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: relative;
+  background-size: cover;
+   height: 100vh;
+}
 
 .a {
   /* Set rules to fill background */
   min-height: 100%;
-  min-width: 1024px;
+  min-width: 1000px;
 
   /* Set up proportionate scaling */
   width: 100%;
@@ -37,11 +35,11 @@ body {
   left: 0;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1000px) {
   /* Specific to this particular image */
   .a {
     left: 50%;
-    margin-left: -512px; /* 50% */
+    margin-left: -512px; 
   }
 }
 
@@ -84,37 +82,34 @@ h3 {
 
 #root {
   display: flex;
-  }
-  /*css del tablero de juego*/
-  #root {
-    display: flex;
-    }
-    /*css del tablero de juego*/
-  .grid {
-    display:  grid;
-    flex-wrap: wrap;
-    margin: none;
-    grid-template-columns: auto auto auto auto auto auto ;
-    border-radius: 25px;
-
+}
   
+/*css del tablero de juego*/
+
+
+/*css del tablero de juego*/
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 22%;
+ 
+ 
+}
+
+@media (max-width: 1500px) {
+  .grid {
+    left:500px;
+    width: 900px;
+    height: 500px;
+    border-radius: 25px;
+    justify-content: center;
+   
+    
   }
-  @media (min-width: 768px) {
-    .grid {
-      width: 640px;
-      height: 500px;
-      display: grid;
-      flex-wrap: wrap;
-      margin: auto;
-      grid-template-columns: auto auto auto auto auto auto ;
-      border-radius: 25px;
-      
-     
-  }
-   /* estilo y funcionalidad de flip a la carta*/
-   .card {
-    width: 65px;
-    height: 100px;
+  .card {
+    width: 100px;
+    height: 120px;
+    border: 3px #354ba1;
     border-radius: 10px;
     margin: 15px;
     display: flex;
@@ -123,136 +118,83 @@ h3 {
     transform-style: preserve-3d;
     animation: gameStart 3s;
   }
-  @media (min-width: 768px) {
-    .card {
-      width: 100px;
-      height: 115px;
-      border: 3px #354BA1;
-      border-radius: 10px;
-      margin: 15px;
-      display: flex;
-      position: relative;
-      transition: transform 0.6s;
-      transform-style: preserve-3d;
-      animation: gameStart 3s;
-    }
-  }
-  .card:hover {
-    box-shadow: 0 4px 16px rgb(4, 57, 66);
-  }
-      
-  .frontCard {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    justify-content: center;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    transform: rotateY(180deg);
-    background-color: #f7f8f8;
-    border-radius: 10px;
-  }
+}
+  /* estilo y funcionalidad de flip a la carta*/
+
+.card {
+  width: 100px;
+  height: 120px;
+  border: 3px #354ba1;
+  border-radius: 10px;
+  margin: 15px;
+  display: flex;
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  animation: gameStart 3s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgb(4, 57, 66);
+}
+
+.frontCard {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  justify-content: center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: rotateY(180deg);
+  background-color: #f7f8f8;
+  border-radius: 10px;
+}
+.backCard {
+  display: flex;
+   
+}
+@media (min-width: 768px) {
   .backCard {
     height: 100%;
     width: 100%;
-    position: absolute;
+    position: relative;
     justify-content: center;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    align-content: flex-end;
+    align-content: center;
+    background-color: #354ba1;
+    border-radius: 10px;
   }
-  @media (min-width: 768px) {
-    .backCard {
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      justify-content: center;
-      backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
-      align-content: flex-end;
-      background-color: #354BA1;
-      border-radius: 10px;
-    }
-  }
-      .flipCard {
-        transform: rotateY(180deg);
-      }
-      
-      .matchCards {
-        pointer-events: none;
-        transform: rotateY(180deg);}
-      
-      }
-      @keyframes gameStart {
-
-        60%,
-        90% {
-          transform: rotateY(180deg);
-        }
-      
-        30%,
-        100% {
-          transform: rotateY(0deg);
-        }
-      }
-
-      .theScore {
-        font-size: 30px;
-        font-family: 'Ghibli Regular';
-        color: #09110b;
-        display: flex;
-        margin-top: 50px;
-        justify-content: right;
-      
-      }
-
-    .Box {
-         display: flex;
-      }
-      
-      @media (min-width: 768px) {
-        .Box {
-          display: flex;
-          grid-template-columns: auto   auto;
-          column-gap: 100px;
-          flex-direction:row-reverse;
-        }
-      }
-
-      .scoreBox {
-        background: rgba(175, 15, 127, 0.23);
-        border-radius: 25px;
-        position:flex;
-      
-        content: right;
-    
-        margin-bottom: 50px;
-        margin-top: 10px;
-      
-      }
-      
-      @media (min-width: 768px) {
-        .scoreBox {
-          background: rgb(50, 224, 215);
-          border-radius: 25px;
-          height: 200px;
-          width: 300px;
-          margin-left: 10px;
-          margin-right: 30px;
-          margin-bottom: 50px;
-          margin-top: none;
-        }
-      }
-      
-        
-.timer {
-  font-size: 30rem;
-  font-family: Forte;
-  color: black;
-  width: 170rem;
-  height: 60rem;
-  margin-left: 1%;
-  margin-top: 50px;
+}
+.flipCard {
+  transform: rotateY(180deg);
 }
 
-      
+.matchCards {
+  pointer-events: none;
+  transform: rotateY(180deg);
+}
+
+@keyframes gameStart {
+  60%,
+  90% {
+    transform: rotateY(180deg);
+  }
+
+  30%,
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+.timer {
+  font-size: 100px;
+  color: rgba(255, 255, 255, 0.822);
+  width: 190rem;
+  height: 70rem;
+  margin-left: 43%;
+   text-align: center;
+  font-family: gamefont;
+  background-color: rgba(0, 0, 0, 0.664);
+  position: relative;}
+

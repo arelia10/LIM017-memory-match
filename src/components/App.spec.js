@@ -14,8 +14,10 @@ describe('App', () => {
   }); 
 
   it("should return a new space",() => {
-    const box =App().getElementsByClassName('Box');
-  expect(box instanceof HTMLElement).toBe(false);
+    
+    const box =App().querySelector('#Box');
+  expect(box instanceof HTMLElement).toBe(true);
+  
   });
   
 
