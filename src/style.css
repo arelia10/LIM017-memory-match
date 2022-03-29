@@ -96,6 +96,7 @@ h3 {
  
 }
 
+
 @media (max-width: 1500px) {
   .grid {
     left:500px;
@@ -168,6 +169,7 @@ h3 {
 }
 .flipCard {
   transform: rotateY(180deg);
+ 
 }
 
 .matchCards {
@@ -198,3 +200,4 @@ h3 {
   background-color: rgba(0, 0, 0, 0.664);
   position: relative;}
 
+  

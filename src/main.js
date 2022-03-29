@@ -23,7 +23,7 @@ const window= document.querySelector(".window");
 const  level= document.querySelector(".level");
 window.style.display="none";
 level.style.display="block";
-timeStar(60)
+timeStar(120)
 
 });
 const medium = document.getElementById("go2"); 
@@ -32,7 +32,7 @@ medium.addEventListener("click",()=>{
   const  level= document.querySelector(".level");
   window.style.display="none";
   level.style.display="block";
-  timeStar(45)});
+  timeStar(100)});
 
 const hard = document.getElementById("go3"); 
 hard.addEventListener("click",()=>{
@@ -40,7 +40,7 @@ hard.addEventListener("click",()=>{
   const  level= document.querySelector(".level");
   window.style.display="none";
   level.style.display="block";
-  timeStar(30)});
+  timeStar(90)});
 document.getElementById(('root')).appendChild(App())
 
 //const cardsHtml=cards(pokemon.items);

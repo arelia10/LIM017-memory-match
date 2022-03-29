@@ -5,7 +5,8 @@ import random from "./random.js";
 const App = () => {
   const el = document.createElement("div");
   el.className = "App";
- 
+  let clickCard = [];
+  let score = 0;
 
   const box = document.createElement("div");
   box.id = "Box";
@@ -16,43 +17,14 @@ const App = () => {
   scoreBox.className = "scoreBox";
   box.appendChild(scoreBox);
 
-  //Se crea div con mensaje ganador.
-  const winner = document.createElement("div");
-  winner.className = "winner";
-  winner.id = "winner";
-  const winnerBox = document.createElement("div");
-  winnerBox.className = "winnerBox";
-  winner.id = "winner";
-  const winnerText = document.createElement("p");
-  winnerText.className = "winnerText";
-  winnerText.innerHTML = "¡GANASTE!";
-  const winBut = document.createElement("img");
-  winBut.className = "winBut";
-  //winBut.src = './img/botonotravez.png';
-  winner.appendChild(winnerBox);
-  winnerBox.appendChild(winnerText);
-  winnerBox.appendChild(winBut);
-  box.appendChild(winner);
-
+  
   //Cuadrícula para distribuir las cartas
   const grid = document.createElement("div"); 
   grid.className = "grid";
   box.appendChild(grid);
 
-  //Mostrar el puntaje
-  const theScore = document.createElement("p");
-  theScore.className = "theScore";
-  theScore.innerHTML = `SCORE`;
-  const scoreNum = document.createElement("span");
-  scoreNum.className = "scoreNum";
-  scoreNum.innerHTML= "00"
-  theScore.appendChild(scoreNum);
-  scoreBox.appendChild(theScore);
-  const replayBut = document.createElement("img");
-  replayBut.className = "replayBut";
-  //replayBut.src = './img/returnImg.png';
-  scoreBox.appendChild(replayBut);
-
+ 
+  
   //Duplicar cada item de la data y randomizarlos (general, para ser usado por cada mazo)
   let doubleArray = pokemon.items.concat(pokemon.items); // Declara variable que dobla los items de Mononoke de Ghibli.js
   const randomCards = random(doubleArray);
@@ -75,9 +47,50 @@ const App = () => {
     backCard.className = "backCard";
     card.appendChild(backCard);
 
+   
+   //Hacer flip a 2 cartas.
+   const flipCard = () => {
+    if (clickCard.length < 2) {
+      clickCard.push(card);
+      card.classList.add("flipCard");
 
+      setTimeout(() => {
+        matchCards(clickCard);
+      },3000);
 
+    }
   }
-  return el;
+  card.addEventListener("click", flipCard);
+
+  //Función Match
+  const matchCards = (array) => {
+    let matchPos = []; //Se crea variable con array abierto.
+    if (array.length == 2 && array[0].id == array[1].id) { //Se comparan los id de los elementos clickeados.
+      matchPos.push(array[0], array[1]); //Si son iguales se encierran los elementos en la variable.
+     {matchPos.forEach(element => { //Se recorre el array y se cambian las clases de los elementos.
+        element.classList.add("matchCards");
+      })}
+      score += 100;
+      
+      if (score == 900) {
+        alert("GANASTES")
+      }
+      array.length = 0; //Si hacen match se vacía el array (parámetro).
+      return true;
+    } else { //Si no hacen match...
+      document.querySelectorAll(".flipCard").forEach(element => { //Se toman los elementos y se remueve el flip para que se volteen las cartas.
+        element.classList.remove("flipCard");
+      });
+      array.length = 0; //Si no hacen match se vacía el array (parámetro).
+      return false;
+    }
+      
+  };
+}
+
+
+return el;
+
 };
+
 export default App;
