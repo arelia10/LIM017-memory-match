@@ -10,7 +10,7 @@ Usuarios jovenes adultos de entre 18 a 29 años.
 * Cartas desplegadas con las imagenes al inicio del juego.
 ¿Cuándo utilizan o utilizarían el producto?
 El usuario utilizará este producto en su tiempo de esparcimiento y relajación.
-![Historias de usuario ](https://docs.google.com/document/d/1pNSWgYxEXvDQd0jF2U11kylaOHuqDakUroIYnn3NQyU/edit)
+[_Historias de usuario _](https://docs.google.com/document/d/1pNSWgYxEXvDQd0jF2U11kylaOHuqDakUroIYnn3NQyU/edit)
 ## Diseño de la Interfaz de Usuario
 #### Prototipo de baja fidelidad
 [_Link del jamboard_](https://jamboard.google.com/d/1cAOQWmLtcQxqvtoJGA59K2nT3xcSDsykaHaXYSeO10Y/edit?usp=sharing)
