@@ -3,7 +3,7 @@ const random = function(pokeArray) {// Se le pasa el parámetro del conjunto de 
     let value = pokeArray.length; //
     while(shortArray > 0) { //Bucle que, antes de ejecutarse, evalúa como verdadera la condición shortArray > 0
         let finalValue = pokeArray[shortArray]; //Estableciendo propiedad de shortArray
-        let randomArray = Math.floor(Math.random()* value);//Estableciendo el array randomizado mediante el método Math.floor y función Math.random 
+        let randomArray = Math.floor(Math.random()*value);//Estableciendo el array randomizado mediante el método Math.floor y función Math.random 
         pokeArray[shortArray]= pokeArray [randomArray];//Se reasigna valor a array[shortArray]
         pokeArray[randomArray]= finalValue;//Se reasigna valor a array[randomArray]
         shortArray=shortArray-1;

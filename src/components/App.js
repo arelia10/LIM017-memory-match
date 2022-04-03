@@ -12,21 +12,16 @@ const App = () => {
   box.id = "Box";
   el.appendChild(box);
 
-  //Cuadrícula para mostrar puntaje (general)
-  const scoreBox = document.createElement("div");
-  scoreBox.className = "scoreBox";
-  box.appendChild(scoreBox);
-
   
-  //Cuadrícula para distribuir las cartas
+ //Cuadrícula para distribuir las cartas
   const grid = document.createElement("div"); 
   grid.className = "grid";
   box.appendChild(grid);
 
  
   
-  //Duplicar cada item de la data y randomizarlos (general, para ser usado por cada mazo)
-  let doubleArray = pokemon.items.concat(pokemon.items); // Declara variable que dobla los items de Mononoke de Ghibli.js
+  //Duplicar cada item de la data y randomizarlos 
+  let doubleArray = pokemon.items.concat(pokemon.items); // Declara variable que dobla los items de pokemon.js
   const randomCards = random(doubleArray);
 
   //Recorro los elementos del array y los encierro en un div

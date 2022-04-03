@@ -2,10 +2,9 @@
   box-sizing: 0;
   padding: 0;
   margin: 0;
-}
-html {
   font-size: 1px;
 }
+
 @font-face {
   font-family: gamefont;
   src: url(Nintendo-DS-BIOS.ttf);
@@ -15,9 +14,9 @@ body {
   background-image: url(imagenes/b.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: relative;
+  background-attachment: fixed;
   background-size: cover;
-   height: 100vh;
+  height: 100vh;
 }
 
 .a {
@@ -39,7 +38,7 @@ body {
   /* Specific to this particular image */
   .a {
     left: 50%;
-    margin-left: -512px; 
+    margin-left: -512px;
   }
 }
 
@@ -54,15 +53,11 @@ h3 {
   position: relative;
   font-family: "Rowdies", cursive;
   color: black;
-  font-size: 150%;
+  font-size: 30px;
 }
-.b {
-  background-repeat: no-repeat;
-  width: 100%;
-  display: flex;
-}
+
 .start {
-  position: absolute;
+  position:fixed;
   top: 50vh;
   left: 46%;
   background-color: white;
@@ -80,32 +75,20 @@ h3 {
   left: 65%;
 }
 
-#root {
-  display: flex;
-}
-  
-/*css del tablero de juego*/
-
-
 /*css del tablero de juego*/
 .grid {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 22%;
- 
- 
+  margin-left: 17%;
 }
 
-
-@media (max-width: 1500px) {
+@media (min-width: 800px ) {
   .grid {
-    left:500px;
+    left: 500px;
     width: 900px;
     height: 500px;
     border-radius: 25px;
     justify-content: center;
-   
-    
   }
   .card {
     width: 100px;
@@ -119,8 +102,31 @@ h3 {
     transform-style: preserve-3d;
     animation: gameStart 3s;
   }
+  .backCard {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    align-content: center;
+    background-color: #354ba1;
+    border-radius: 10px;
+  }
+  .frontCard {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    justify-content: center;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: rotateY(180deg);
+    background-color: #f7f8f8;
+    border-radius: 10px;
+  }
+
 }
-  /* estilo y funcionalidad de flip a la carta*/
+/* estilo y funcionalidad de flip a la carta*/
 
 .card {
   width: 100px;
@@ -136,7 +142,7 @@ h3 {
 }
 
 .card:hover {
-  box-shadow: 0 4px 16px rgb(4, 57, 66);
+  box-shadow: 0 4px 16px rgb(214, 73, 7);
 }
 
 .frontCard {
@@ -145,18 +151,14 @@ h3 {
   position: absolute;
   justify-content: center;
   backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
+
   transform: rotateY(180deg);
   background-color: #f7f8f8;
   border-radius: 10px;
 }
 .backCard {
   display: flex;
-   
-}
-@media (min-width: 768px) {
-  .backCard {
-    height: 100%;
+  height: 100%;
     width: 100%;
     position: relative;
     justify-content: center;
@@ -165,11 +167,10 @@ h3 {
     align-content: center;
     background-color: #354ba1;
     border-radius: 10px;
-  }
 }
+
 .flipCard {
   transform: rotateY(180deg);
- 
 }
 
 .matchCards {
@@ -195,9 +196,8 @@ h3 {
   width: 190rem;
   height: 70rem;
   margin-left: 43%;
-   text-align: center;
+  text-align: center;
   font-family: gamefont;
   background-color: rgba(0, 0, 0, 0.664);
-  position: relative;}
-
-  
+  position: relative;
+}

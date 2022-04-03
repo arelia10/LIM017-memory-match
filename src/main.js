@@ -1,6 +1,4 @@
 import App from './components/App.js';
-//import pokemonfunction from './components/App.js';
-//import pokemon from './data/pokemon/pokemon.js';
 let total= 120;
 let min=0;
 let seg=0;
@@ -43,8 +41,7 @@ hard.addEventListener("click",()=>{
   timeStar(90)});
 document.getElementById(('root')).appendChild(App())
 
-//const cardsHtml=cards(pokemon.items);
-//document.getElementById('sizecard').appendChild(cards(pokemon.items))
+
 function timeStar(total2){total=total2;
   
   min= 0;
@@ -60,7 +57,7 @@ function timeStar(total2){total=total2;
           if(total===0){clearInterval(cont)
             alert("tu tiempo termino")
           }
-  },1000);}
+  },2000);}
  
  
 

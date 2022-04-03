@@ -28,12 +28,4 @@ describe("random", () => {
     expect(typeof random).toEqual('function');
   });
 
-  it('debería retornar 2 para "[1,2,3,4]"' , () => {
-    let array = [1,2,3,4];
-  expect(random(array)).toHaveLength(4);
-  });
-
-  it('debería retornar 3 para "[1,2,3,4]"' , () => {
-    let array = [1,2,3,4];
-  expect(random(array)).toContain(3);
-  })})})
+})});
